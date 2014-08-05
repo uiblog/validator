@@ -6,8 +6,31 @@
 </head>
 <body>
 	<form action="index.html">
-		<input type="text" name="uname">
+		<p>
+			<input type="text" name="uname">
+		</p>
 		<button type="button" value="提交"></button>
 	</form>
+	<script src="src/validator.js"></script>
+	<script>
+	var debug = function() {
+		return window.console || {
+			log: function(){}
+		};
+	}
+	var data = {
+	    username: "TomXu"
+	};
+
+	validator.config = {
+	    username: 'isAlphaNum'
+	};
+
+	validator.validate(data);
+
+	if (validator.hasErrors()) {
+	    debug.log(validator.messages.join("\n"));
+	}
+	</script>
 </body>
 </html>
