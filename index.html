@@ -5,19 +5,23 @@
 	<title>Form Validator</title>
 </head>
 <body>
-	<form action="index.html">
+	<form id="form" action="index.html">
+		<h2>required</h2>
 		<p>
-			<input type="text" name="uname">
+			<input type="text" name="required">
 		</p>
-		<button type="button" value="提交"></button>
+		<h2>remote</h2>
+		<p>
+			<input type="text" name="remote">
+		</p>
+		<button type="submit">提交</button>
 	</form>
+	<script src="lib/jquery-1.11.1.min.js"></script>
 	<script src="src/validator.js"></script>
+	<script src="src/jquery.validator.js"></script>
 	<script>
-	var debug = function() {
-		return window.console || {
-			log: function(){}
-		};
-	}
+	
+	/*
 	var data = {
 	    username: "TomXu"
 	};
@@ -31,6 +35,27 @@
 	if (validator.hasErrors()) {
 	    debug.log(validator.messages.join("\n"));
 	}
+	*/
+	</script>
+	<script>
+	$(function() {
+		$("#form").validator({
+			filds: {
+				"required": "required;num",
+        		"remote": "required;remote[http://127.0.0.1/tmp/json/actor.json.js]"
+			},
+
+			rules: {
+		    	num: [/^\d{6}$/, '请输入6位数字'],
+		    	fun: function(el, param) {
+		    		return {
+		    			result: false,
+		    			message: "function"
+		    		};
+		    	}
+		    }
+		});
+	});
 	</script>
 </body>
 </html>

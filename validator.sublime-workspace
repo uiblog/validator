@@ -1,0 +1,677 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Va",
+				"Validator"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"V",
+				"Validator"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"inli",
+				"inline"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"nd",
+				"ndNav"
+			],
+			[
+				"in",
+				"innerText"
+			],
+			[
+				"be",
+				"bedSize"
+			],
+			[
+				"bed",
+				"bedType"
+			],
+			[
+				"bedTy",
+				"bedType"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"border-lef",
+				"border-left-color"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"ban",
+				"bannerImages"
+			],
+			[
+				"re",
+				"resize"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"pho",
+				"phone"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"data",
+				"data-index"
+			],
+			[
+				"inputP",
+				"inputPanelClass"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"te",
+				"template"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"fu",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/data/java_workspace/hotel-fe-static/controllers/e.v.js",
+			"settings":
+			{
+				"buffer_size": 34319,
+				"line_ending": "Unix",
+				"name": "/**"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"ip",
+				"Package Control: Install Package"
+			],
+			[
+				"rp",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 476.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib2,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/data/java_workspace/hotel-fe-static/controllers/index.js",
+		"/data/java_workspace/hotel-fe-static/public/templates/index.dust",
+		"/data/java_workspace/hotel-fe-static/public/templates/layouts/master.dust",
+		"/data/java_workspace/hotel-fe-static/models/index.js",
+		"/data/java_workspace/hotel-fe-static/config/config.json",
+		"/data/java_workspace/hotel-fe-static/config/development.json",
+		"/data/java_workspace/hotel-fe-static/hotel-fe.sublime-project",
+		"/data/java_workspace/hotel-fe-static/locales/US/en/index.properties",
+		"/Users/zhao/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/zhao/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/data/java_workspace/hotel-fe-static/index.js",
+		"/data/www-root/github/zhaojinzhao/validator/index.html",
+		"/data/www-root/github/zhaojinzhao/validator/src/jquery.validator.js",
+		"/data/www-root/github/zhaojinzhao/validator/src/validator.js",
+		"/data/java_workspace/hotel-admin/src/main/webapp/WEB-INF/view/mis/zhilian/reportQueryConsume.ftl",
+		"/Users/zhao/Desktop/1.txt",
+		"/data/www-root/validator/validator.js",
+		"/data/www-root/meituan/hotel-act/201407/01/index.html",
+		"/data/www-root/meituan/hotel-action/20140728/index.html",
+		"/data/www-root/meituan/hotel-action/20140728/i/03.jpg",
+		"/data/www-root/tmp/test-cos-font.html",
+		"/data/java_workspace/hotel-supply-chain/src/main/webapp/static/js/app/audit.js",
+		"/data/java_workspace/hotel-supply-chain/src/main/webapp/static/js/app/images.js",
+		"/data/www-root/fe/ui/sidebar/sidebar.js",
+		"/data/java_workspace/hotel-supply-chain/src/main/webapp/static/js/app/hotellist.js",
+		"/data/java_workspace/hotel-supply-chain/src/main/webapp/static/lib/validator/jquery.validator.js",
+		"/data/www-root/fe/ui/sidebar/sidebar-jquery.js",
+		"/data/java_workspace/hotel-supply-chain/src/main/webapp/WEB-INF/view/staticinfo/lib/static.ftl",
+		"/data/java_workspace/hotel-supply-chain/src/main/webapp/WEB-INF/view/staticinfo/common/script.ftl",
+		"/data/java_workspace/hotel-supply-chain/src/main/webapp/WEB-INF/view/staticinfo/common/head.ftl",
+		"/data/www-root/meituan/push/Gruntfile.js",
+		"/data/www-root/meituan/push/package.json",
+		"/Users/zhao/Desktop/t.js",
+		"/data/www-root/github/validator/local/zh_CN.js",
+		"/Users/zhao/Desktop/autojs/jquery-autocomplete.js",
+		"/data/www-root/github/chosen/public/index.html",
+		"/data/www-root/github/ImageCrop/index.html",
+		"/Users/zhao/Downloads/jcrop_zh/js/jquery.Jcrop.js",
+		"/Users/zhao/Desktop/1.js",
+		"/data/www-root/github/ImageCrop/ImageCrop.js",
+		"/data/www-root/github/ImageCrop/index.css",
+		"/Users/zhao/Desktop/autojs/mycomplete.js",
+		"/data/www-root/github/example-multipage-shim/www/js/common.js",
+		"/data/www-root/github/example-multipage-shim/www/js/app/model/m1.js",
+		"/data/www-root/github/example-multipage-shim/www/js/app/main1.js",
+		"/data/www-root/github/example-multipage-shim/www/page1.html",
+		"/data/www-root/github/example-multipage/www/js/page1.js",
+		"/data/www-root/github/example-multipage/www/js/app/main1.js",
+		"/data/www-root/github/example-multipage/www/js/lib/jquery.js",
+		"/data/www-root/github/example-multipage/www/js/common.js",
+		"/data/www-root/github/example-multipage/www/js/app/model/Base.js",
+		"/data/www-root/github/example-multipage/www/js/app/model/m2.js",
+		"/data/www-root/github/example-multipage/www/js/app/model/m1.js",
+		"/data/www-root/github/example-multipage/www/js/app/controller/c2.js",
+		"/data/www-root/github/example-multipage/www/js/app/controller/c1.js",
+		"/data/www-root/github/example-multipage/www/js/app/main2.js",
+		"/data/www-root/github/example-multipage/www/js/page2.js",
+		"/data/www-root/github/create-template/www/app/main.js",
+		"/data/www-root/github/create-template/www/app.js",
+		"/data/www-root/github/create-template/www/index.html",
+		"/data/www-root/modal/index.html",
+		"/data/www-root/modal/js/modal.js",
+		"/Users/zhao/Downloads/datepicker/css/datepicker.css",
+		"/data/java_workspace/hotel-supply-chain/src/main/webapp/WEB-INF/view/staticinfo/hotellist.ftl",
+		"/data/java_workspace/hotel-supply-chain/src/main/webapp/static/js/page/info.js",
+		"/data/java_workspace/hotel-supply-chain/src/main/webapp/static/js/database/db_rooms.js",
+		"/data/www-root/github/create-template/www/app/messages.js",
+		"/data/www-root/github/create-template/www/lib/print.js",
+		"/data/java_workspace/hotel-supply-chain/src/main/webapp/static/js/common/formHelper.js",
+		"/Users/zhao/Desktop/table.html",
+		"/data/java_workspace/hotel-supply-chain/src/main/webapp/WEB-INF/view/staticinfo/info.ftl",
+		"/data/java_workspace/hotel-supply-chain/src/main/webapp/static/js/database/前端表单数据结构设计",
+		"/data/www-root/tmp/json/actor.json.json",
+		"/{\"entity\":\"hotel_sc_ext_info\",\"change\":[{\"attr_typ",
+		"/data/www-root/meituan/hotel-stm/_inc/menu.ftl",
+		"/data/www-root/meituan/hotel-stm/index.html",
+		"/data/www-root/tmp/hotel.js",
+		"/data/java_workspace/hotel-admin/src/main/webapp/static/mis/js/zhilian-pay-history.js",
+		"/data/java_workspace/hotel-admin/src/main/webapp/static/mis/js/hotel-util.js",
+		"/data/software/apache-maven-3.0.3/conf/settings.xml",
+		"/data/java_workspace/hotel-admin/src/main/webapp/WEB-INF/view/mis/zhilian/zhilianList.ftl",
+		"/data/www-root/meituan/push/_inc/script.html",
+		"/data/www-root/meituan/push/public/dest.json",
+		"/data/www-root/meituan/push/public/dest.json.gz",
+		"/data/www-root/meituan/push/dest/dest.json",
+		"/data/www-root/meituan/hotel-stm/_inc/nav.html",
+		"/data/www-root/meituan/hotel-stm/sidebar.ftl",
+		"/data/www-root/meituan/hotel-stm/tmp.html",
+		"/data/www-root/meituan/hotel-stm/demo.html",
+		"/data/www-root/meituan/hotel-stm/_inc/userbar.ftl",
+		"/data/www-root/meituan/hotel-stm/_inc/tmp.html",
+		"/data/www-root/meituan/hotel-stm/_inc/sidebar.html",
+		"/data/www-root/tmp/Unicode编码.html",
+		"/data/www-root/tmp/过滤YUIID.html",
+		"/data/www-root/tmp/lz77.html",
+		"/data/www-root/tmp/getData.html",
+		"/data/www-root/tmp/2048_sohu.html",
+		"/Users/zhao/Desktop/untitled.js",
+		"/data/www-root/github/jquery-city-select/jquery.city.select.js",
+		"/data/www-root/meituan/push/docs.html",
+		"/data/www-root/meituan/push/_inc/footer.html",
+		"/Users/zhao/Desktop/bibao.html",
+		"/data/www-root/meituan/push/docs/step_1.html",
+		"/data/www-root/meituan/push/docs/step_3.html",
+		"/data/www-root/github/select/src/select.js",
+		"/Users/zhao/Downloads/index.md",
+		"/Users/zhao/Desktop/autojs/mac.txt",
+		"/data/www-root/meituan/push/step.html",
+		"/data/java_workspace/movieadmin/pom.xml",
+		"/data/www-root/meituan/push/docs/step_2.html",
+		"/data/www-root/meituan/push/c/style.css",
+		"/data/www-root/meituan/push/faq.html",
+		"/data/www-root/jsdemos/canvas_刮刮卡.html",
+		"/data/www-root/meituan/push/docs/1.html",
+		"/data/www-root/meituan/push/docs/step_4.html",
+		"/data/www-root/meituan/push/step_3.html",
+		"/data/www-root/cssdemos/viewport/viewport.html",
+		"/data/www-root/meituan/push/c/mediaquery.css",
+		"/data/www-root/meituan/push/j/script.js",
+		"/data/www-root/meituan/push/index.html",
+		"/data/www-root/meituan/push/_inc/header.html",
+		"/data/www-root/meituan/push/_inc/subpage_header.html",
+		"/data/www-root/meituan/push/c/subpage_footer.html",
+		"/data/www-root/meituan/push/_inc/head.html",
+		"/data/www-root/meituan/push/_inc/toolbar.html",
+		"/data/www-root/meituan/push/footer.html",
+		"/data/www-root/bootstrap/scrollspy/scrollspy.html",
+		"/data/software/nginx-1.6.0/conf/nginx.conf"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"templates",
+			"express",
+			"wrap",
+			"function",
+			"        \n",
+			"+j",
+			"+d",
+			"control+",
+			"IndexModel",
+			"function",
+			"';\n",
+			"shift+d",
+			"greeting",
+			">\n",
+			"validator.types",
+			">\n",
+			"=\"\">\n",
+			">\n",
+			"blur",
+			"bj.",
+			"43",
+			"images",
+			"\">\n",
+			"=\"\">\n",
+			"/hotel",
+			"/hotel/",
+			"Bind",
+			"/hotel",
+			"dropdown-collapse",
+			"toggle-view",
+			"ndIcon",
+			"ndNav",
+			"ndTarget",
+			"js/",
+			":",
+			"'",
+			"!",
+			"\"\n",
+			"']);\n",
+			"destrop",
+			"\">\n",
+			"Image",
+			"return",
+			"showPanel",
+			"JSBtnOk",
+			"obj",
+			"_close",
+			"JsBtnCancel",
+			"modalOverLay",
+			"mask",
+			"_show",
+			"position",
+			"_show",
+			"_show()",
+			"<th",
+			"th>",
+			"th",
+			"cc-left",
+			"type=\"text\"",
+			"tplBedSelector",
+			"htmlItemTmpl",
+			";\n",
+			"value",
+			"tplHotelExInfo",
+			"\"\"},\n",
+			"$fields",
+			"form",
+			"])\n",
+			"text",
+			"value",
+			"obj",
+			"</option>",
+			"\"",
+			"\";",
+			"public static final String VO_TAURUS ",
+			"public static final String VO_ARIES = ",
+			"fields",
+			"legend",
+			"alert",
+			"col-sm-3",
+			"with",
+			"href",
+			"script",
+			"YUI_config",
+			"fa-angle-up",
+			"nav",
+			"script",
+			"imovie",
+			"tmp",
+			"最高",
+			"initAttrs",
+			"space",
+			"使用",
+			"Push Http",
+			"Push Java Client",
+			"fff",
+			".syntaxhighlighter",
+			"#369!important",
+			".keyword",
+			".syntaxhighlighter .keyword",
+			"highlighter_221824",
+			"h2",
+			"h1",
+			"h3",
+			"h2",
+			"getData",
+			"doc",
+			"3>",
+			"h3>",
+			"03.png",
+			"h1",
+			"images",
+			"after",
+			">\n",
+			"initSlider",
+			"sliderControle",
+			"initSlider",
+			"MenuControl",
+			"this",
+			"sliderControle",
+			"section-about",
+			"createNode",
+			"onChange",
+			"repaint",
+			"refresh",
+			"render",
+			"input",
+			"onmouseselection"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/data/java_workspace/hotel-fe-static/controllers/e.v.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 34319,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								33395,
+								33395
+							]
+						],
+						"settings":
+						{
+							"auto_name": "/**",
+							"is_xml": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4238.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "validator.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/data/java_workspace/hotel-fe-static/hotel-fe.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 286.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
