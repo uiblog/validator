@@ -9,8 +9,8 @@ var utils = (function() {
 
     return {
         getFields: function(form) {
-            // TODO what the form
             var $form = $(form);
+            
             return $form.map(function() {
                     var elements = $form.prop("elements");
 
@@ -58,7 +58,7 @@ Validator.prototype = {
     _init: function(element, options) {
         var self = this;
 
-        self.$form = $("#form");
+        self.$form = $(element);
 
         self.rules = new Rules(options.rules); // 内置校验规则方法
         self.messages = new Message(); // 校验结果消息
@@ -76,15 +76,21 @@ Validator.prototype = {
 
     _initEvent: function() {
         var self = this;
+
+        self.$form.on("validator:valide",
+            $.proxy(self.validate, self) 
+        )
+        .on("validator:valide:field",
+            $.proxy(self._validateField, self)
+        )
+        .on("validator:valide:form",
+            $.proxy(self._validateForm, self)
+        );
     },
 
     setConfig: function(config) {
         this.config = config;
     },
-
-    extendRules: function(rules) {
-
-    }
 
     validate: function(fields) {
         var self = this;
@@ -95,7 +101,11 @@ Validator.prototype = {
         if(!fields || $.isArray(fields)) {
             self._validateForm(fields);
         } else {
-            self._validateField(fields);
+            if(fields.nodeName && fields.nodeName == "form") {
+                self._validateField(fields);
+            } else {
+                self._validateForm();
+            }
         }
 
         $.when.apply(
@@ -109,12 +119,22 @@ Validator.prototype = {
                 self.debug && Debuger.log(self.errors);
 
                 // trigger message
-                self.$form.trigger("validator:form", [self.errors]);
+                self.$form.trigger("message.validator", [self.errors]);
+                if(self.errors.length) {
+                    self.$form.trigger("invalid.validator");
+                } else {
+                    self.$form.trigger("valid.validator");
+                }
+                
             }
         });
     },
 
     _validateForm: function(fields) {
+        var self = this;
+
+        self.debug && Debuger.log("valide fields");
+
         if (!fields) {
             fields = utils.getFields(self.$form);
         }
@@ -124,7 +144,7 @@ Validator.prototype = {
 
             self._validateField(element);
         });
-    }
+    },
 
     _validateField: function(element) {
         var self = this,
@@ -132,23 +152,21 @@ Validator.prototype = {
             config,
             rules,
             checker,
-            result,
-            message,
-            message = {};
+            result,     // boolean, {result, message}, jqXHR
+            messages = {};
 
         name = element.name;
         config = self.config[name];
 
-        if (!element || !name || !config) return; // continue
+        // no validte
+        if (!element || !name || !config) return;
 
         // rules array
         rules = config.split(';');
 
-        // TODO 合并
-        // 合并记录消息、合并想上广播的消息
-        // 多条规则只发送一个结果
-        for (var i = 0, rule; rule = rules[i]; i++) {
-            var parts,
+        for (var i = 0, len = rules.length; i < len; i++) {
+            var rule = rules[i],
+                parts,
                 param;
 
             parts = ruleParamRegex.exec(rule);
@@ -157,6 +175,7 @@ Validator.prototype = {
                 param = parts[2];
             }
 
+            // 校验函数
             checker = self.rules[rule];
 
             if (!checker) {
@@ -167,13 +186,12 @@ Validator.prototype = {
             }
 
             // 验证失败或者验证结束返回
-            result = checker.call(null, element, param);
-            message = self.messages[rule];
+            result = checker.call(self, element, param);
 
-            message = {
+            messages = {
                 name: name,
                 element: element,
-                message: message
+                message: self.messages[rule]
             };
 
             // 异步校验
@@ -187,42 +205,43 @@ Validator.prototype = {
                             return true;
                         }
 
-                        message = formatMessage(message, remoteDataChecker(data));
+                        messages = formatMessage(messages, remoteDataChecker(data));
 
-                        self.errors.push(message);
-                        self.$form.trigger("validator:field", [message]);
+                        self.errors.push(messages);
+                        self.$form.trigger("validator:field", [messages]);
                     },
 
                     function(jqXHR, textStatus) {
-                        message.result = false;
+                        messages.result = false;
 
-                        self.errors.push(message);
-                        self.$form.trigger("validator:field", [message]);
+                        self.errors.push(messages);
+                        self.$form.trigger("validator:field", [messages]);
                     }
                 )
-                    .always(function() {
-                        delete self.deferred[name];
-                    });
+                .always(function() {
+                    delete self.deferred[name];
+                });
 
                 // TODO break or continue
                 break;
             }
 
             // 非异步校验
-            message = formatMessage(message, result);
+            messages = formatMessage(messages, result);
 
-            // 记录验证消息，并广播当前字段的校验结果
-            self.errors.push(message);
-            self.$form.trigger("validator:field", [message]);
-
+            
             // 当前规则校验失败停止后续规则校验
-            if (result === false) {
+            if (result === false || i === len - 1) {
+
+                // 记录验证消息，并广播当前字段的校验结果
+                self.errors.push(messages);
+                self.$form.trigger("validator:field", [messages]);
+                
                 break;
             }
         };
     }
 };
-
 
 function Rules(rules) {
     var self = this;
@@ -238,6 +257,28 @@ Rules.prototype = {
         var val = $.trim($(element).val());
 
         return !!val;
+    },
+
+    checked: function(element, params) {
+        var self = this,
+            count;
+
+        count = self.$form.find('input[name="' + element.name + '"]').filter(function() {
+            return !this.disabled && this.checked && $(this).is(':visible');
+        }).length;
+
+        if(params) {
+            if(inRange(count, params)) {
+                return true;
+            } else {
+                return {
+                    result: false,
+                    message: "请选择" + params     // TODO 只能message
+                }
+            }
+        } else {
+            return !!count;
+        }
     },
 
     remote: function(element, params) {
@@ -259,6 +300,30 @@ Rules.prototype = {
     }
 };
 
+function inRange(value, params) {
+    if(!params) return;
+
+    var p, len;
+
+    p = params.split('~');
+    len = p.length;
+
+    if(len == 1) {
+        return value == p[0]
+    }
+
+    if(len == 3) {
+        return value >= p[0] && value <= p[2]
+    }
+
+    if(/^\~/.test(params)) {
+        return value <= p[1];
+    } else {
+        return value >= p[0]
+    }
+
+}
+
 function extendRules(rules) {
     for(var r in rules) {
         if(rules.hasOwnProperty(r)) {
@@ -270,6 +335,7 @@ function extendRules(rules) {
 function Message() {
     this.required = "不能为空";
     this.remote = "验证失败";
+    this.checked = "请至少选择一项";
 }
 
 

@@ -4,6 +4,114 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"result"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"vale",
+				"value"
+			],
+			[
+				"fil",
+				"filter"
+			],
+			[
+				"pa",
+				"params"
+			],
+			[
+				"_va",
+				"_validateForm"
+			],
+			[
+				"vali",
+				"validator"
+			],
+			[
+				"_ini",
+				"_initEvent"
+			],
+			[
+				"fi",
+				"field"
+			],
+			[
+				"rule",
+				"rules"
+			],
+			[
+				"rul",
+				"rules"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"e",
+				"element"
+			],
+			[
+				"con",
+				"continue"
+			],
+			[
+				"me",
+				"message"
+			],
+			[
+				"get",
+				"getFields"
+			],
+			[
+				"mes",
+				"messages"
+			],
+			[
+				"r",
+				"rules"
+			],
+			[
+				"mess",
+				"message"
+			],
+			[
+				"u",
+				"uname"
+			],
+			[
+				"m",
+				"message"
+			],
+			[
+				"ele",
+				"element"
+			],
+			[
+				"msg",
+				"messages"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"p",
+				"proxy"
+			],
+			[
+				"_",
+				"_initEvent"
+			],
+			[
 				"Va",
 				"Validator"
 			],
@@ -46,10 +154,6 @@
 			[
 				"padd",
 				"padding-bottom"
-			],
-			[
-				"co",
-				"color"
 			],
 			[
 				"tex",
@@ -124,10 +228,6 @@
 				"bannerImages"
 			],
 			[
-				"re",
-				"resize"
-			],
-			[
 				"font",
 				"font-size"
 			],
@@ -184,18 +284,34 @@
 	"buffers":
 	[
 		{
-			"file": "/data/java_workspace/hotel-fe-static/controllers/e.v.js",
+			"file": "src/jquery.validator.js",
 			"settings":
 			{
-				"buffer_size": 34319,
-				"line_ending": "Unix",
-				"name": "/**"
+				"buffer_size": 1351,
+				"line_ending": "Unix"
 			}
 		},
 		{
+			"file": "src/validator.js",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 8515,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/zhao/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 266,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1330,
 				"line_ending": "Unix"
 			}
 		}
@@ -236,6 +352,10 @@
 	},
 	"file_history":
 	[
+		"/data/java_workspace/hotel-fe-static/controllers/e.v.js",
+		"/Users/zhao/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/zhao/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/data/www-root/github/zhaojinzhao/validator/validator.sublime-project",
 		"/data/java_workspace/hotel-fe-static/controllers/index.js",
 		"/data/java_workspace/hotel-fe-static/public/templates/index.dust",
 		"/data/java_workspace/hotel-fe-static/public/templates/layouts/master.dust",
@@ -244,8 +364,6 @@
 		"/data/java_workspace/hotel-fe-static/config/development.json",
 		"/data/java_workspace/hotel-fe-static/hotel-fe.sublime-project",
 		"/data/java_workspace/hotel-fe-static/locales/US/en/index.properties",
-		"/Users/zhao/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
-		"/Users/zhao/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
 		"/data/java_workspace/hotel-fe-static/index.js",
 		"/data/www-root/github/zhaojinzhao/validator/index.html",
 		"/data/www-root/github/zhaojinzhao/validator/src/jquery.validator.js",
@@ -361,13 +479,11 @@
 		"/data/www-root/meituan/push/c/subpage_footer.html",
 		"/data/www-root/meituan/push/_inc/head.html",
 		"/data/www-root/meituan/push/_inc/toolbar.html",
-		"/data/www-root/meituan/push/footer.html",
-		"/data/www-root/bootstrap/scrollspy/scrollspy.html",
-		"/data/software/nginx-1.6.0/conf/nginx.conf"
+		"/data/www-root/meituan/push/footer.html"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -382,6 +498,32 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"todo",
+			"check",
+			"el",
+			"=\"\">\n",
+			"formatTip",
+			"_formatMessage",
+			"obj",
+			"showmsg",
+			"o",
+			"s",
+			"key",
+			"errors",
+			"_parseMessage",
+			"\",\n",
+			"remote",
+			"then",
+			"isObject",
+			"rules",
+			"\";",
+			"field",
+			"obj",
+			"messages",
+			"trigger",
+			"});\n",
+			"instance",
+			"getFields",
 			"templates",
 			"express",
 			"wrap",
@@ -483,33 +625,7 @@
 			".keyword",
 			".syntaxhighlighter .keyword",
 			"highlighter_221824",
-			"h2",
-			"h1",
-			"h3",
-			"h2",
-			"getData",
-			"doc",
-			"3>",
-			"h3>",
-			"03.png",
-			"h1",
-			"images",
-			"after",
-			">\n",
-			"initSlider",
-			"sliderControle",
-			"initSlider",
-			"MenuControl",
-			"this",
-			"sliderControle",
-			"section-about",
-			"createNode",
-			"onChange",
-			"repaint",
-			"refresh",
-			"render",
-			"input",
-			"onmouseselection"
+			"h2"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -527,67 +643,126 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/data/java_workspace/hotel-fe-static/controllers/e.v.js",
+					"file": "src/jquery.validator.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 34319,
+						"buffer_size": 1351,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								33395,
-								33395
+								109,
+								109
 							]
 						],
 						"settings":
 						{
-							"auto_name": "/**",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/validator.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8515,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								173,
+								173
+							]
+						],
+						"settings":
+						{
 							"is_xml": false,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4238.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
+					"file": "/Users/zhao/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 266,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								47,
+								47
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								243,
+								243
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -669,7 +844,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 286.0,
+	"side_bar_width": 198.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

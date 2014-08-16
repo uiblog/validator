@@ -6,30 +6,45 @@
 		var self = this;
 
 		self.each(function() {
-			var instance = $(this).data[PLUGIN_NAME];
+			var instance = $(this).data[PLUGIN_NAME],
+				passbook = false,
+				autoSubmit = true;		// 验证通过后是否自动提交
 
 			if (!instance) {
 				var validator = new Validator(this, options);
+
 				instance = validator;
-				$(this).data[PLUGIN_NAME] = instance;
+				$(this).data(PLUGIN_NAME, instance);
 
 				validator.setConfig(options.filds);
         
 				$(this).on("submit", function(e) {
+
+					if(passbook) return true;
+
 					var fields = utils.getFields($(this));
 
 			        e.preventDefault();
 			        
 			        // validate
 			        validator.validate(fields);
+			        
 				})
-				.on("focusin", "input", function() {
+				.on("focusin.validator", "input", function() {
 					
 				})
-				.on("focusout", "input", function() {
+				.on("focusout.validator", "input", function() {
 					validator.validate(this);
 				})
-				.on("validator:form", $.proxy(showMsg, null));
+				.on("message.validator", $.proxy(showMsg, null))
+				.on("valid.validator", function() {
+					if(autoSubmit) {
+						passbook = true;
+			        	this.submit();
+					}
+				})
+				.on("invalid.validator", function() {
+				});
 			}
 		});
 

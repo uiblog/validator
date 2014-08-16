@@ -14,39 +14,30 @@
 		<p>
 			<input type="text" name="remote">
 		</p>
-		<button type="submit">提交</button>
+		<h2>checked</h2>
+		<p>
+			<input type="checkbox" name="checked" value="">
+			<input type="checkbox" name="checked" value="">
+			<input type="checkbox" name="checked" value="">
+		</p>
+		<!-- <button id="submit" type="button">提交</button> -->
+		<button id="btnSubmit" type="submit">提交</button>
 	</form>
 	<script src="lib/jquery-1.11.1.min.js"></script>
 	<script src="src/validator.js"></script>
 	<script src="src/jquery.validator.js"></script>
 	<script>
-	
-	/*
-	var data = {
-	    username: "TomXu"
-	};
-
-	validator.config = {
-	    username: 'isAlphaNum'
-	};
-
-	validator.validate(data);
-
-	if (validator.hasErrors()) {
-	    debug.log(validator.messages.join("\n"));
-	}
-	*/
-	</script>
-	<script>
 	$(function() {
-		$("#form").validator({
+		var validator = $("#form").validator({
 			filds: {
 				"required": "required;num",
-        		"remote": "required;remote[http://127.0.0.1/tmp/json/actor.json.js]"
+        		"remote": "required;remote[http://127.0.0.1/tmp/json/actor.json.js]",
+        		"checked" : "checked[2~]"
 			},
 
 			rules: {
 		    	num: [/^\d{6}$/, '请输入6位数字'],
+
 		    	fun: function(el, param) {
 		    		return {
 		    			result: false,
@@ -54,7 +45,21 @@
 		    		};
 		    	}
 		    }
-		});
+		})
+		// ajax submit
+		.on("click", "#submit", function(e) {
+			// $(e.delegateTarget).trigger("validator:valide");
+
+		})
+		.on("valid.validator", function() {
+			console.log("validator valid");
+		})
+		.on("invalid.validator", function() {
+			console.log("validator invalid");
+		})
+		.data("validator");
+
+
 	});
 	</script>
 </body>
