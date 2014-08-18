@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+<label>Feeling: <input name=f type="text" oninput="check(this)"></label>
+  <script>
+     function check(input) {
+   if (input.value == "good" ||
+       input.value == "fine" ||
+       input.value == "tired") {
+     input.setCustomValidity('"' + input.value + '" is not a feeling.');
+   } else {
+     // input is fine -- reset the error message
+     input.setCustomValidity('');
+   }
+ }
+  </script>
+</body>
+</html>

@@ -2,26 +2,59 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Form Validator</title>
+	<style>
+		fieldset {margin: 20px}
+	</style>
 </head>
 <body>
 	<form id="form" action="index.html">
-		<h2>required</h2>
-		<p>
-			<input type="text" name="required">
-		</p>
-		<h2>remote</h2>
-		<p>
-			<input type="text" name="remote">
-		</p>
-		<h2>checked</h2>
-		<p>
-			<input type="checkbox" name="checked" value="">
-			<input type="checkbox" name="checked" value="">
-			<input type="checkbox" name="checked" value="">
-		</p>
-		<!-- <button id="submit" type="button">提交</button> -->
-		<button id="btnSubmit" type="submit">提交</button>
+		<fieldset>
+			<legend>完整性校验</legend>
+			<h3>required</h3>
+			<p>
+				<input type="text" name="required">
+			</p>
+			<h3>checked</h3>
+			<p>
+				<input type="checkbox" name="checked" value="">
+				<input type="checkbox" name="checked" value="">
+				<input type="checkbox" name="checked" value="">
+			</p>
+		</fieldset>
+
+		<fieldset>
+			<legend>格式校验</legend>
+			<h3>email</h3>
+			<p>
+				<input type="text" name="email">
+			</p>
+			<h3>mobile</h3>
+			<p>
+				<input type="text" name="mobile">
+			</p>
+		</fieldset>
+
+		<fieldset>
+			<legend>逻辑校验</legend>
+			<h3>remote</h3>
+			<p>
+				<input type="text" name="remote">
+			</p>
+
+			<h3>自定义函数</h3>
+			<p>
+				<input type="text" name="remote">
+			</p>
+		</fieldset>
+
+
+		<br>
+		<div style="margin:20px">
+			<button id="btnSubmit" type="button">提交</button>
+			<!-- <button id="btnSubmit" type="submit">提交</button> -->
+		</div>
 	</form>
 	<script src="lib/jquery-1.11.1.min.js"></script>
 	<script src="src/validator.js"></script>
@@ -30,36 +63,58 @@
 	$(function() {
 		var validator = $("#form").validator({
 			filds: {
-				"required": "required;num",
-        		"remote": "required;remote[http://127.0.0.1/tmp/json/actor.json.js]",
-        		"checked" : "checked[2~]"
+				"required"	: "required",
+        		"remote"	: "required;remote[index.html]",
+        		"checked" 	: "checked[2~4]",
+        		"email" 	: "email",
+        		"mobile"	: "mobile"
 			},
 
 			rules: {
 		    	num: [/^\d{6}$/, '请输入6位数字'],
-
 		    	fun: function(el, param) {
 		    		return {
 		    			result: false,
 		    			message: "function"
 		    		};
 		    	}
+		    },
+
+		    valid: function() {
+		    	// valid callback
+		    },
+
+		    invalid: function() {
+		    	// invalid callback
 		    }
 		})
-		// ajax submit
-		.on("click", "#submit", function(e) {
-			// $(e.delegateTarget).trigger("validator:valide");
-
-		})
 		.on("valid.validator", function() {
-			console.log("validator valid");
+			
 		})
 		.on("invalid.validator", function() {
-			console.log("validator invalid");
+			
 		})
 		.data("validator");
 
+		// ajax submit
+		// setFields 设置不同的验证规则
+		$("#form").on("click", "button", function(e) {
+			validator.setFields({
+				"required": "required"
+			});
+			// 方式一
+			// $(e.delegateTarget).trigger("validator:valide");
 
+			// 方式二
+			validator.validate({
+				valid: function() {
+
+				},
+				invalid: function() {
+
+				}
+			});
+		});
 	});
 	</script>
 </body>

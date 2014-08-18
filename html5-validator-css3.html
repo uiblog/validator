@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+	body {word-wrap: break-word;}
+</style>
+<style>
+input[type=text]:focus:valid,
+input[type=email]:focus:valid,
+input[type=number]:focus:in-range { outline: 2px green solid; }
+
+input[type=text]:focus:invalid,
+input[type=email]:focus:invalid,
+input[type=number]:focus:out-of-range { outline: 2px red solid; }
+
+input:required { outline: 2px blue solid; }
+</style>
+<title>HTML5 Validator</title>
+</head>
+<body>
+<pre>
+input[type=text]:focus:valid,
+input[type=email]:focus:valid,
+input[type=number]:focus:in-range { outline: 2px green solid; }
+
+input[type=text]:focus:invalid,
+input[type=email]:focus:invalid,
+input[type=number]:focus:out-of-range { outline: 2px red solid; }
+
+input:required { outline: 2px blue solid; }
+</pre>
+<br><br><br><br>
+	<p>
+		:required <input type="text" required="required" />
+	</p>
+	
+	<p>普通输入框：<input type="text" /></p>
+	<p>邮件输入框：<input type="email" /></p>
+	<p>数值输入框：<input type="number" min=0 max=10 /> (0~10)</p>
+</body>
+</html>
